@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Issues Dashboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+<!-- Navbar -->
+
+<div class="bg-white shadow p-4 flex justify-between">
+
+<h2 class="font-bold text-xl">GitHub Issues Tracker</h2>
+
+<div>
+<input id="searchInput" type="text"
+placeholder="Search issues..."
+class="border p-2 rounded">
+
+<button onclick="searchIssue()"
+class="bg-purple-600 text-white px-4 py-2 rounded">
+Search
+</button>
+</div>
+
+</div>
+
+<!-- Tabs -->
+
+<div class="max-w-6xl mx-auto mt-6">
+
+<div class="flex gap-4 mb-6">
+
+<button onclick="loadIssues('all')" class="tabBtn bg-purple-600 text-white px-4 py-2 rounded">All</button>
+
+<button onclick="loadIssues('open')" class="tabBtn border px-4 py-2 rounded">Open</button>
+
+<button onclick="loadIssues('closed')" class="tabBtn border px-4 py-2 rounded">Closed</button>
+
+</div>
+
+<!-- Issues Grid -->
+
+<div id="issuesContainer"
+class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+</div>
+
+</div>
+
+<!-- Modal -->
+
+<div id="modal"
+class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+
+<div class="bg-white p-6 rounded w-96">
+
+<h2 id="modalTitle" class="text-xl font-bold mb-3"></h2>
+
+<p id="modalDesc"></p>
+
+<p class="mt-3"><b>Status:</b> <span id="modalStatus"></span></p>
+
+<p><b>Author:</b> <span id="modalAuthor"></span></p>
+
+<p><b>Priority:</b> <span id="modalPriority"></span></p>
+
+<button onclick="closeModal()"
+class="mt-4 bg-purple-600 text-white px-4 py-2 rounded">
+Close
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
