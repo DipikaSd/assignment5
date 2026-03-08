@@ -28,15 +28,56 @@ Search
 
 <!-- Tabs -->
 
-<div class="max-w-6xl mx-auto mt-6">
-
 <div class="flex gap-4 mb-6">
 
-<button onclick="loadIssues('all')" class="tabBtn bg-purple-600 text-white px-4 py-2 rounded">All</button>
+<button id="allBtn" onclick="loadIssues('all')" class="tabBtn bg-purple-600 text-white px-4 py-2 rounded">
+All
+</button>
 
-<button onclick="loadIssues('open')" class="tabBtn border px-4 py-2 rounded">Open</button>
+<button id="openBtn" onclick="loadIssues('open')" class="tabBtn border px-4 py-2 rounded">
+Open
+</button>
 
-<button onclick="loadIssues('closed')" class="tabBtn border px-4 py-2 rounded">Closed</button>
+<button id="closedBtn" onclick="loadIssues('closed')" class="tabBtn border px-4 py-2 rounded">
+Closed
+</button>
+
+</div>
+<div class="bg-white p-4 rounded shadow mb-6 flex justify-between items-center">
+
+<div class="flex items-center gap-3">
+
+<div class="bg-purple-100 p-2 rounded-full">
+⚙️
+</div>
+
+<div>
+<h3 class="font-bold text-lg">
+<span id="totalIssues">0</span> Issues
+</h3>
+
+<p class="text-gray-500 text-sm">
+Track and manage your project issues
+</p>
+
+</div>
+
+</div>
+
+<div class="flex gap-4 text-sm">
+
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 bg-green-500 rounded-full"></span>
+Open
+</div>
+
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 bg-purple-500 rounded-full"></span>
+Closed
+
+</div>
+
+</div>
 
 </div>
 

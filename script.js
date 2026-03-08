@@ -23,6 +23,8 @@ displayIssues(issues);
 
 }
 
+
+
 function displayIssues(issues){
 
 container.innerHTML = "";
@@ -95,4 +97,24 @@ displayIssues(data.data);
 
 }
 
+loadIssues("all");
+function setActiveTab(type){
+
+document.querySelectorAll(".tabBtn").forEach(btn=>{
+btn.classList.remove("bg-purple-600","text-white");
+});
+
+if(type === "all"){
+document.getElementById("allBtn").classList.add("bg-purple-600","text-white");
+}
+
+if(type === "open"){
+document.getElementById("openBtn").classList.add("bg-purple-600","text-white");
+}
+
+if(type === "closed"){
+document.getElementById("closedBtn").classList.add("bg-purple-600","text-white");
+}
+
+}
 loadIssues("all");
