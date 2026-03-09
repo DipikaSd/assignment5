@@ -18,7 +18,7 @@ Example:
 const numbers = [1, 2, 3];
 const newNumbers = [...numbers, 4];
 
-3️⃣ What is the difference between map(), filter(), and forEach()?
+3. What is the difference between map(), filter(), and forEach()?
 
 These three methods are used to work with arrays.
 
